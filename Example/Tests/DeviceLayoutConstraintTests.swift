@@ -28,11 +28,11 @@ class DeviceLayoutConstraintTests: QuickSpec {
     }
     
     override func spec() {
-        var sut: DeviceLayoutConstraint!
+        var sut: DeviceLayoutConstraintSpy!
         let defaultConstant: CGFloat = 30
         
         beforeEach {
-            sut = DeviceLayoutConstraint()
+            sut = DeviceLayoutConstraintSpy()
             sut.constant = defaultConstant
         }
         
@@ -57,6 +57,35 @@ class DeviceLayoutConstraintTests: QuickSpec {
                     }
                 }
             }
+            
+            context("when deviceSize is 4inch device") {
+                beforeEach {
+                    sut.deviceSize = .screen4Inch
+                }
+                
+                context("when set constant per deviceSize") {
+                    beforeEach {
+                        sut.inch3_5 = Expected.Constant.inch3_5
+                        sut.inch4 = Expected.Constant.inch4
+                        sut.inch4_7 = Expected.Constant.inch4_7
+                        sut.inch5_5 = Expected.Constant.inch5_5
+                        sut.inch7_9 = Expected.Constant.inch7_9
+                        sut.inch9_7 = Expected.Constant.inch9_7
+                        sut.inch12_9 = Expected.Constant.inch12_9
+                    }
+                    
+                    it("layoutIfNeeded should be called ONLY once") {
+                        expect(sut.layoutIfNeededCalledCount).to(equal(1))
+                    }
+                }
+            }
         }
+    }
+}
+
+class DeviceLayoutConstraintSpy: DeviceLayoutConstraint {
+    var layoutIfNeededCalledCount: Int = 0
+    override open func layoutIfNeeded() {
+        layoutIfNeededCalledCount += 1
     }
 }

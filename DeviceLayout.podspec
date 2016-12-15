@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'DeviceLayout/Classes/**/*'
+  s.source_files = 'Sources/**/*'
   s.dependency 'Device', '~> 2.0.0'
   # s.resource_bundles = {
   #   'DeviceLayout' => ['DeviceLayout/Assets/*.png']

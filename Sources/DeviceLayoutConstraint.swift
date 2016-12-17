@@ -12,8 +12,6 @@ import Device
 
 class DeviceLayoutConstraint: NSLayoutConstraint {
     
-    open var deviceSize: Size = Device.size()
-    
     @IBInspectable var inch3_5: CGFloat = 0.0 { didSet { updateConstant(size: .screen3_5Inch, constant: inch3_5)}}
     @IBInspectable var inch4: CGFloat = 0.0 { didSet { updateConstant(size: .screen4Inch, constant: inch4)}}
     @IBInspectable var inch4_7: CGFloat = 0.0 { didSet { updateConstant(size: .screen4_7Inch, constant: inch4_7)}}
@@ -23,10 +21,14 @@ class DeviceLayoutConstraint: NSLayoutConstraint {
     @IBInspectable var inch12_9: CGFloat = 0.0 { didSet { updateConstant(size: .screen12_9Inch, constant: inch12_9)}}
     
     fileprivate func updateConstant(size: Size, constant: CGFloat) {
-        if size == self.deviceSize {
+        if size == deviceSize() {
             self.constant = constant
             layoutIfNeeded()
         }
+    }
+    
+    open func deviceSize() -> Size {
+        return Device.size()
     }
     
     open func layoutIfNeeded() {

@@ -8,6 +8,7 @@
 
 import XCTest
 
+import Device
 import Quick
 import Nimble
 
@@ -39,7 +40,7 @@ class DeviceLayoutConstraintTests: QuickSpec {
         describe("DeviceLayoutConstraint") {
             context("when use iPhone6") {
                 beforeEach {
-                    sut.deviceSize = .screen5_5Inch
+                    sut.expectedDeviceSize = .screen5_5Inch
                     sut.inch5_5 = Expected.Constant.inch5_5
                 }
                 
@@ -60,7 +61,7 @@ class DeviceLayoutConstraintTests: QuickSpec {
             
             context("when deviceSize is 4inch device") {
                 beforeEach {
-                    sut.deviceSize = .screen4Inch
+                    sut.expectedDeviceSize = .screen4Inch
                 }
                 
                 context("when set constant per deviceSize") {
@@ -84,8 +85,14 @@ class DeviceLayoutConstraintTests: QuickSpec {
 }
 
 class DeviceLayoutConstraintSpy: DeviceLayoutConstraint {
+    var expectedDeviceSize: Size!
     var layoutIfNeededCalledCount: Int = 0
+    
     override open func layoutIfNeeded() {
         layoutIfNeededCalledCount += 1
+    }
+    
+    override open func deviceSize() -> Size {
+        return expectedDeviceSize
     }
 }

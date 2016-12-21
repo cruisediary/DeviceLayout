@@ -1,0 +1,18 @@
+oxc_image: xcode8.2
+language: objective-c
+xcode-project: DeviceLayout.xcworkspace
+xcode_scheme: DeviceLayout
+sudo: false
+env:
+  matrix:
+    - DESTINATION="OS9.1, name=iPad 2"
+    - DESTINATION="OS9.1, name=iPad Air"
+    - DESTINATION="OS9.1, name=iPhone 5"
+    - DESTINATION="OS9.1, name=iPhone 6"
+    - DESTINAITON="OS10.0, name=iPhone 6s"
+
+script:
+  - set -o pipefail
+  - git submodule update --init --recursive
+  - xcodebuild -version
+  - xcodebuild -workspace 

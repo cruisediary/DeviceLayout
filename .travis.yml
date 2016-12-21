@@ -1,0 +1,8 @@
+oxc_image: xcode8
+language: objective-c
+xcode-project: DeviceLayout.xcworkspace
+xcode_scheme: DeviceLayout
+xcode_sdk: iphonesimulator8.4
+script:
+    - xcodebuild -scheme 'DeviceLayout-iOS' -sdk iphonesimulator CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO test | xcpretty -c
+    - xcodebuild -scheme 'DeviceLayout-OSX' test | xcpretty -c

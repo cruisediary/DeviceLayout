@@ -28,11 +28,15 @@ class DeviceLayoutConstraint: NSLayoutConstraint {
     }
     
     open func deviceSize() -> Size {
-        return Device.size()
+        return Device.deviceSize
     }
     
     open func layoutIfNeeded() {
         self.firstItem.layoutIfNeeded()
         self.secondItem?.layoutIfNeeded()
     }
+}
+
+fileprivate extension Device {
+    static let deviceSize = Device.size()
 }

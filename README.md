@@ -2,8 +2,8 @@
 
 ![logo](README/logo.png)
 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/cruisediary/DeviceLayout)
 ![Swift](https://img.shields.io/badge/Swift-3.0-orange.svg)
-
 [![CI Status](http://img.shields.io/travis/cruisediary/DeviceLayout.svg?style=flat)](https://travis-ci.org/cruisediary/DeviceLayout)
 [![Version](https://img.shields.io/cocoapods/v/DeviceLayout.svg?style=flat)](http://cocoapods.org/pods/DeviceLayout)
 [![License](https://img.shields.io/cocoapods/l/DeviceLayout.svg?style=flat)](http://cocoapods.org/pods/DeviceLayout)

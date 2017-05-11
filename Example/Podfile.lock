@@ -1,6 +1,6 @@
 PODS:
   - Device (2.0.0)
-  - DeviceLayout (0.1.0):
+  - DeviceLayout (0.1.2):
     - Device (~> 2.0.0)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
@@ -29,7 +29,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Device: d18c6b7f5c38f3be11dd05c4f24a091bb7061b36
-  DeviceLayout: 490a671996f816a2816e9e727913bb8185891617
+  DeviceLayout: 56535c1e30e23b1a84643cbb3daf5dc6f1d6893d
   FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   Nimble-Snapshots: e743439f26c2fa99d8f7e0d7c01c99bcb40aa6f2
@@ -37,4 +37,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 2d5ad51aeb98b52d771e5bda79717c42fe49fc7a
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.1

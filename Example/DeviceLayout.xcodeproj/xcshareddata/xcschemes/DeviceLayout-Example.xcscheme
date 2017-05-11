@@ -52,6 +52,16 @@
                ReferencedContainer = "container:DeviceLayout.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4C9E57661EC4CD1400E7EE70"
+               BuildableName = "DeviceLayoutTests.xctest"
+               BlueprintName = "DeviceLayoutTests"
+               ReferencedContainer = "container:DeviceLayout.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C462BE11EC73B51002A9A51 /* Device.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF706471EC4D78600A764BF /* Device.framework */; };
 		4CF706321EC4D66100A764BF /* DeviceLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF706281EC4D66000A764BF /* DeviceLayout.framework */; };
 		4CF706371EC4D66100A764BF /* DeviceLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF706361EC4D66100A764BF /* DeviceLayoutTests.swift */; };
 		4CF706391EC4D66100A764BF /* DeviceLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF7062B1EC4D66000A764BF /* DeviceLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,6 +32,7 @@
 		4CF706361EC4D66100A764BF /* DeviceLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceLayoutTests.swift; sourceTree = "<group>"; };
 		4CF706381EC4D66100A764BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CF706431EC4D6A400A764BF /* DeviceLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceLayoutConstraint.swift; sourceTree = "<group>"; };
+		4CF706471EC4D78600A764BF /* Device.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Device.framework; path = Carthage/Build/iOS/Device.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C462BE11EC73B51002A9A51 /* Device.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +61,7 @@
 				4CF7062A1EC4D66000A764BF /* DeviceLayout */,
 				4CF706351EC4D66100A764BF /* DeviceLayoutTests */,
 				4CF706291EC4D66000A764BF /* Products */,
+				4CF706461EC4D78600A764BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +101,14 @@
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
 		};
+		4CF706461EC4D78600A764BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CF706471EC4D78600A764BF /* Device.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -119,6 +131,7 @@
 				4CF706241EC4D66000A764BF /* Frameworks */,
 				4CF706251EC4D66000A764BF /* Headers */,
 				4CF706261EC4D66000A764BF /* Resources */,
+				4CF706451EC4D73B00A764BF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -202,6 +215,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4CF706451EC4D73B00A764BF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Device.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4CF706231EC4D66000A764BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -272,7 +302,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -320,7 +350,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -339,8 +369,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DeviceLayout/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cruz.DeviceLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,8 +392,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DeviceLayout/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cruz.DeviceLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -35,6 +35,7 @@ class ViewController: UIViewController {
             case .iPad2:           print("It's an iPad 2")
             case .iPad3:           print("It's an iPad 3")
             case .iPad4:           print("It's an iPad 4")
+            case .iPad5:           print("It's an iPad 5")
             case .iPadAir:         print("It's an iPad Air")
             case .iPadAir2:        print("It's an iPad Air 2")
             case .iPadMini:        print("It's an iPad Mini")
@@ -42,6 +43,7 @@ class ViewController: UIViewController {
             case .iPadMini3:       print("It's an iPad Mini 3")
             case .iPadMini4:       print("It's an iPad Mini 4")
             case .iPadPro9_7Inch:  print("It's an iPad Pro 9.7 Inch")
+            case .iPadPro10_5Inch: print("It's an iPad Pro 10.5 Inch")
             case .iPadPro12_9Inch: print("It's an iPad Pro 12.9 Inch")
             
             /*** iPod ***/
@@ -65,8 +67,10 @@ class ViewController: UIViewController {
             case .screen4Inch:    print("It's a 4 inch screen")
             case .screen4_7Inch:  print("It's a 4.7 inch screen")
             case .screen5_5Inch:  print("It's a 5.5 inch screen")
+            case .screen5_8Inch:  print("It's a 5.8 inch screen")
             case .screen7_9Inch:  print("It's a 7.9 inch screen")
             case .screen9_7Inch:  print("It's a 9.7 inch screen")
+            case .screen10_5Inch: print("It's a 10.5 inch screen")
             case .screen12_9Inch: print("It's a 12.9 inch screen")
             default:              print("Unknown size")
         }

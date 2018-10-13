@@ -77,6 +77,9 @@ pod "DeviceLayout"
 github "cruisediary/DeviceLayout" ~> 0.4.0
 ```
 
+## Dependencies
+* [Device](https://github.com/Ekhoo/Device) - Light weight tool for detecting the current device and screen size written in swift.
+
 ## 👨‍💻 Author
 
 cruz, cruzdiary@gmail.com

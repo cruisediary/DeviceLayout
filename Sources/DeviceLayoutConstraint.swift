@@ -17,6 +17,8 @@ class DeviceLayoutConstraint: NSLayoutConstraint {
     @IBInspectable var inch4_7: CGFloat = 0.0 { didSet { updateConstant(size: .screen4_7Inch, constant: inch4_7)}}
     @IBInspectable var inch5_5: CGFloat = 0.0 { didSet { updateConstant(size: .screen5_5Inch, constant: inch5_5)}}
     @IBInspectable var inch5_8: CGFloat = 0.0 { didSet { updateConstant(size: .screen5_8Inch, constant: inch5_8)}}
+    @IBInspectable var inch6_1: CGFloat = 0.0 { didSet { updateConstant(size: .screen6_1Inch, constant: inch6_1)}}
+    @IBInspectable var inch6_5: CGFloat = 0.0 { didSet { updateConstant(size: .screen6_5Inch, constant: inch6_5)}}
     @IBInspectable var inch7_9: CGFloat = 0.0 { didSet { updateConstant(size: .screen7_9Inch, constant: inch7_9)}}
     @IBInspectable var inch9_7: CGFloat = 0.0 { didSet { updateConstant(size: .screen9_7Inch, constant: inch9_7)}}
     @IBInspectable var inch10_5: CGFloat = 0.0 { didSet { updateConstant(size: .screen10_5Inch, constant: inch10_5)}}

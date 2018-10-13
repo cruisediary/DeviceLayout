@@ -34,8 +34,8 @@ class DeviceLayoutConstraint: NSLayoutConstraint {
     }
     
     open func layoutIfNeeded() {
-        self.firstItem?.layoutIfNeeded()
-        self.secondItem?.layoutIfNeeded()
+        firstItem?.layoutIfNeeded()
+        secondItem?.layoutIfNeeded()
     }
 }
 

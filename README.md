@@ -28,7 +28,7 @@ public enum Size: Int, Comparable {
     case screen4_7Inch
     /// iPhone 6+, 6s+, 7, 8
     case screen5_5Inch
-    /// iPhone X, Xs, 7+, 8+
+    /// iPhone X, 7+, 8+
     case screen5_8Inch
     /// iPhone Xs
     case screen6_1Inch

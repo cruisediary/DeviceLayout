@@ -24,17 +24,17 @@ public enum Size: Int, Comparable {
     case screen3_5Inch
     /// iPhone 5, 5s, 5c, SE, iPod Touch 5-6th gen.
     case screen4Inch
-    /// iPhone 6, 6s, 7, 8
+    /// iPhone 6, 6s
     case screen4_7Inch
-    /// iPhone 6+, 6s+, 7+, 8+
+    /// iPhone 6+, 6s+, 7, 8
     case screen5_5Inch
-    /// iPhone X, Xs
+    /// iPhone X, Xs, 7+, 8+
     case screen5_8Inch
-    /// iPhone Xr
+    /// iPhone Xs
     case screen6_1Inch
-    /// iPhone Xs Max
+    /// iPhone Xr
     case screen6_5Inch
-    /// iPad Mini
+    /// iPad Mini, iPhone Xs Max
     case screen7_9Inch
     /// iPad
     case screen9_7Inch
@@ -53,7 +53,7 @@ public enum Size: Int, Comparable {
 
 Second Set your own constant per device size and adjust your UI design guide
 
-comparing `PSD`, `Sketch` or `Zeplin` UI Guide 
+comparing `PSD`, `Sketch` or `Zeplin` UI Guide
 
 Make designer be happy :)
 

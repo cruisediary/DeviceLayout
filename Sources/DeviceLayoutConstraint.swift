@@ -22,6 +22,7 @@ class DeviceLayoutConstraint: NSLayoutConstraint {
     @IBInspectable var inch7_9: CGFloat = 0.0 { didSet { updateConstant(size: .screen7_9Inch, constant: inch7_9)}}
     @IBInspectable var inch9_7: CGFloat = 0.0 { didSet { updateConstant(size: .screen9_7Inch, constant: inch9_7)}}
     @IBInspectable var inch10_5: CGFloat = 0.0 { didSet { updateConstant(size: .screen10_5Inch, constant: inch10_5)}}
+    @IBInspectable var inch11: CGFloat = 0.0 { didSet { updateConstant(size: .screen11Inch, constant: inch11)}}
     @IBInspectable var inch12_9: CGFloat = 0.0 { didSet { updateConstant(size: .screen12_9Inch, constant: inch12_9)}}
     
     fileprivate func updateConstant(size: Size, constant: CGFloat) {

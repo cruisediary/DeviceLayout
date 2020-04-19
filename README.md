@@ -3,7 +3,7 @@
 ![logo](README/logo.png)
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/cruisediary/DeviceLayout)
-![Swift](https://img.shields.io/badge/Swift-4.2-orange.svg)
+![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)
 [![CI Status](http://img.shields.io/travis/cruisediary/DeviceLayout.svg?style=flat)](https://travis-ci.org/cruisediary/DeviceLayout)
 [![Version](https://img.shields.io/cocoapods/v/DeviceLayout.svg?style=flat)](http://cocoapods.org/pods/DeviceLayout)
 [![License](https://img.shields.io/cocoapods/l/DeviceLayout.svg?style=flat)](http://cocoapods.org/pods/DeviceLayout)
@@ -40,6 +40,8 @@ public enum Size: Int, Comparable {
     case screen9_7Inch
     /// iPad Pro (10.5-inch)
     case screen10_5Inch
+    /// iPad Pro (11-inch)
+    case screen11Inch
     /// iPad Pro (12.9-inch)
     case screen12_9Inch
 }
@@ -61,7 +63,7 @@ Make designer be happy :)
 
 ## Requirements
 - iOS 8.0+
-- Swift 3+, 4+
+- Swift 3+, 4+, 5+
 
 ## Installation
 
@@ -74,7 +76,7 @@ pod "DeviceLayout"
 
 ### Carthage
 ```
-github "cruisediary/DeviceLayout" ~> 0.4.0
+github "cruisediary/DeviceLayout" ~> 0.5.0
 ```
 
 ## Dependencies
